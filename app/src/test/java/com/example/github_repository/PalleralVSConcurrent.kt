@@ -39,7 +39,7 @@ class Palleral {
 
     fun getUserInfo(): UserInfo {
         Thread.sleep(1000)
-        return UserInfo(name = "이기정", age = 20)
+        return UserInfo(name = "임민규", age = 20)
     }
 
     fun getContactInfo(): ContactInfo {
@@ -74,7 +74,7 @@ class Concurrent {
 
     fun getAsyncUserInfo() = GlobalScope.async {
         Thread.sleep(1000)
-        UserInfo(name = "이기정", age = 20)
+        UserInfo(name = "임민규", age = 20)
     }
 
     fun getAsyncContactInfo() = GlobalScope.async {

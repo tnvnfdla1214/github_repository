@@ -43,13 +43,14 @@ class SignInActivity : AppCompatActivity(), CoroutineScope {
 
     private fun launchMainActivity() {
         startActivity(Intent(this, MainActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK) //실행 액티비티 외 모두 제거
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) //새로운 테스크 생성
         })
     }
 
     private fun checkAuthCodeExist() = authTokenProvider.token.isNullOrEmpty().not()
 
+    //http://github.com/login/oauth/authorize/client_id = asdasdasda
     private fun loginGithub() {
         val loginUri = Uri.Builder().scheme("https").authority("github.com")
             .appendPath("login")
@@ -67,6 +68,7 @@ class SignInActivity : AppCompatActivity(), CoroutineScope {
         super.onNewIntent(intent)
 
         intent.data?.getQueryParameter("code")?.let { code ->
+            //getAcessToken
             GlobalScope.launch {
                 showProgress()
                 val progressJob = getAccessToken(code)

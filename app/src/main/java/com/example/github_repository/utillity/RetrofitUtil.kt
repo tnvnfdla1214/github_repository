@@ -1,7 +1,6 @@
 package com.example.github_repository.utillity
 
-import aop.fastcampus.part4.chapter05.BuildConfig
-
+import com.example.github_repository.BuildConfig
 import com.example.github_repository.data.Url
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
