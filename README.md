@@ -15,10 +15,34 @@
   - SignInActivity
     1. authTokenProvider : 앱 내에 Token을 받아 저장하는 전역 변수
         - Dispatchers.Main 사용
-    3. getAccessToken : 깃허브 토큰 받아 오는 함수
+    2. getAccessToken : 깃허브 토큰 받아 오는 함수
         - Dispatcher.IO 사용
-  - 
-2. 
+  - MainActivity
+    1. SetData : githubRepoList 의 정보의 유무에 따라 즐겨찾기 리스트를 리사이클러뷰에 추가시켜준다.
+       - Dispatchers.Main 사용 -> 화면에 띄울때
+       - Dispatcher.IO 사용 -> 정보를 불러올때
+  - SearchActivity
+    1. searchKeyword : String 형의 키워드로 깃 허브에 있는 닉네임을 불러온다.
+       - Dispatcher.IO 사용
+  - RepositoryActivity
+    1. loadRepository : 원하는 레파지토리 정보를 자세히 정보를 불러온다.
+       - Dispatcher.IO 사용
+2. 사용자 지정 CoroutineScope
+  - SignInActivity
+    1. authTokenProvider : 앱 내에 Token을 받아 저장하는 전역 변수
+        - Dispatchers.Main 사용
+    2. getAccessToken : 깃허브 토큰 받아 오는 함수
+        - Dispatcher.IO 사용
+  - MainActivity
+    1. SetData : githubRepoList 의 정보의 유무에 따라 즐겨찾기 리스트를 리사이클러뷰에 추가시켜준다.
+       - Dispatchers.Main 사용 -> 화면에 띄울때
+       - Dispatcher.IO 사용 -> 정보를 불러올때
+  - SearchActivity
+    1. searchKeyword : String 형의 키워드로 깃 허브에 있는 닉네임을 불러온다.
+       - Dispatcher.IO 사용
+  - RepositoryActivity
+    1. loadRepository : 원하는 레파지토리 정보를 자세히 정보를 불러온다.
+       - Dispatcher.IO 사용
 #### 검색기능
 
 #### Room 사용
@@ -26,6 +50,6 @@
 ***
 
 ### :paperclip: 소감
-코루틴을 공부하기 위해 예제를 보았지만 정확한 이해가 되지 않았다.
+코루틴을 공부하기 위해 여러 예제를 보았지만 정확한 이해가 되지 않았다.
 
 그래서 인터넷도 찾아보고 나름의 정리를 하였지만 아직까지 스스로 짜는것은 조금 어려울거같긴한다.
