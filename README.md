@@ -44,9 +44,17 @@
     1. loadRepository : 원하는 레파지토리 정보를 자세히 정보를 불러온다.
        - Dispatcher.IO 사용
 #### 검색기능
-
+1. SearchActivity에서 사용자가 입력한 Keyword를 String값으로 받아온다.
+2. RetrofitUtil에 Retrofit으로 지정해놓은 GITHUB_API_URL의 serch정보 주소값을 Get해 온다.
+3. 해당 정보를 List<GithubRepoEntity> 으로 공정하여 데이터를 저장한다.
+4. 해당 데이터를 Recyclerview에 띄워준다.
+5. 원하는 데이터의 item을 클릭시 해당 item의 정보를 RepositoryActivity넘겨준다.
+6. 데이터를 알맞는 곳에 저장해준다.
 #### Room 사용
-
+1. RepositoryActivity에서 즐겨찾기 클릭한다.
+2. Room이름을 "github_repository_app.db"으로 저장한다.
+3. 저장의 방식은 SearchHistoryDao 에 getRepository 의 Query문의 형식으로 저장한다.
+4. MainActivity에서 insertAll SearchHistoryDao 에 getRepository 의 Query문으로 현재 Room에 저장되어있는 데이터를 전부 가져온다.
 ***
 
 ### :paperclip: 소감
