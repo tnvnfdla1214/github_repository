@@ -18,6 +18,7 @@ class SignInActivity : AppCompatActivity(), CoroutineScope {
 
     private lateinit var binding: ActivitySignInBinding
 
+    // 기본 Main Thread 정의와 job을 함께 초기화
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + Job()
 
