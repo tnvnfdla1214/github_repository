@@ -50,11 +50,20 @@
 4. 해당 데이터를 Recyclerview에 띄워준다.
 5. 원하는 데이터의 item을 클릭시 해당 item의 정보를 RepositoryActivity넘겨준다.
 6. 데이터를 알맞는 곳에 저장해준다.
+
 #### Room 사용
 1. RepositoryActivity에서 즐겨찾기 클릭한다.
 2. Room이름을 "github_repository_app.db"으로 저장한다.
 3. 저장의 방식은 SearchHistoryDao 에 getRepository 의 Query문의 형식으로 저장한다.
 4. MainActivity에서 insertAll SearchHistoryDao 에 getRepository 의 Query문으로 현재 Room에 저장되어있는 데이터를 전부 가져온다.
+
+#### 코루틴 학습 예제
+1. Basic
+2. Cancellation and Timeouts
+3. Composing Suspending Functions
+4. Coroutines under ths hood
+5. Coroutine Context and Dispatchers
+본 예제에 대한 기록은 [코루틴 튜토리얼](https://github.com/tnvnfdla1214/Coroutine_-tutorial) 에 있습니다.
 ***
 
 ### :paperclip: 소감
